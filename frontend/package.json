@@ -1,10 +1,10 @@
 {
-  "name": "gameplan-ui",
+  "name": "politihub-ui",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/assets/gameplan/frontend/ && yarn copy-html-entry",
-    "copy-html-entry": "cp ../gameplan/public/frontend/index.html ../gameplan/www/g.html",
+    "build": "vite build --base=/assets/politihub/frontend/ && yarn copy-html-entry",
+    "copy-html-entry": "cp ../politihub/public/frontend/index.html ../politihub/www/g.html",
     "serve": "vite preview",
     "test-local": "cypress open --e2e --browser chrome",
     "test": "cypress run --record --key 9c23c39a-b56b-46d5-b673-44faf1f1da83"
