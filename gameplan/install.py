@@ -16,7 +16,7 @@ def check_frappe_version():
 
 	frappe_version = Version(__version__)
 	if (frappe_version.major or 0) < 15:
-		raise SystemExit('Gameplan requires Frappe Framework version 15 or above')
+		raise SystemExit('PolitiHub requires Frappe Framework version 15 or above')
 
 def download_rembg_model():
 	from rembg import new_session

@@ -1,9 +1,9 @@
 [project]
-name = "gameplan"
+name = "politihub"
 authors = [
-    { name = "Frappe Technologies Pvt Ltd", email = "developers@frappe.io"}
+    { name = "Don't Panic Consulting, Co", email = "dev@dpcco.me"}
 ]
-description = "Team discussion and collaboration tool"
+description = "Political Party Management and Collaboration tools."
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]

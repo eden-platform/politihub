@@ -1,10 +1,10 @@
 from . import __version__ as app_version
 
-app_name = "gameplan"
-app_title = "Gameplan"
-app_publisher = "Frappe Technologies Pvt Ltd"
-app_description = "Team discussion and collaboration tool"
-app_email = "faris@frappe.io"
+app_name = "politihub"
+app_title = "PolitiHub"
+app_publisher = "Don't Panic Consulting, Co."
+app_description = "Political Party Management and Collaboration tools."
+app_email = "devs@dpcco.me"
 app_license = "AGPLv3"
 app_icon_url = "/assets/gameplan/manifest/favicon-180.png"
 app_icon_title = "Gameplan"

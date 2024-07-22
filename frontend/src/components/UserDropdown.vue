@@ -8,7 +8,7 @@
         <GameplanLogo class="w-8 h-8 rounded" />
         <div class="ml-2 flex flex-col">
           <div class="text-base font-medium text-gray-900 leading-none">
-            Gameplan
+            PolitiHub
           </div>
           <div class="mt-1 hidden text-sm text-gray-700 sm:inline leading-none">
             {{ $user().full_name }}

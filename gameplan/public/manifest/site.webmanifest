@@ -1,6 +1,6 @@
 {
   "display": "standalone",
-  "short_name": "Gameplan",
+  "short_name": "PolitiHub",
   "icons": [
     {
       "src": "/assets/gameplan/manifest/manifest-icon-192.maskable.png",

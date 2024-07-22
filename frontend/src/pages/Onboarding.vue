@@ -3,7 +3,7 @@
     <span
       class="select-none text-3xl font-black uppercase tracking-[0.5em] text-gray-900"
     >
-      Gameplan
+      PolitiHub
     </span>
     <div class="min mt-7 min-w-[36rem] rounded-lg bg-white p-9 shadow-md">
       <div
