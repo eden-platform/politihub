@@ -7,7 +7,7 @@
   <a href="https://dashboard.cypress.io/projects/y2q697/runs">
     <img alt="cypress" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/y2q697/main&style=flat&logo=cypress">
   </a>
-  <a href="https://github.com/frappe/gameplan/blob/main/LICENSE">
+  <a href="https://github.com/eden-platform/politihub/blob/main/LICENSE">
     <img alt="license" src="https://img.shields.io/badge/license-AGPLv3-blue">
   </a>
 </p>
@@ -62,8 +62,8 @@ These are some of the tools used on frontend:
 ### Docker
 You need Docker, docker-compose and git setup on your machine. Refer [Docker documentation](https://docs.docker.com/). After that, run the following commands:
 ```
-git clone https://github.com/frappe/gameplan
-cd gameplan/docker
+git clone https://github.com/eden-platform/politihub
+cd politihub/docker
 docker-compose up
 ```
 
@@ -84,33 +84,33 @@ Currently, this app depends on the `develop` branch of [frappe](https://github.c
 1. In the frappe-bench directory, run `bench start` and keep it running. Open a new terminal session and cd into `frappe-bench` directory.
 1. Run the following commands:
     ```sh
-    bench new-site gameplan.test
-    bench get-app gameplan
-    bench --site gameplan.test install-app gameplan
-    bench --site gameplan.test add-to-hosts
-    bench --site gameplan.test browse --user Administrator
+    bench new-site politihub.test
+    bench get-app politihub
+    bench --site politihub.test install-app politihub
+    bench --site politihub.test add-to-hosts
+    bench --site politihub.test browse --user Administrator
     ```
- 1. Now, open a new terminal session and cd into `frappe-bench/apps/gameplan`, and run the following commands:
+ 1. Now, open a new terminal session and cd into `frappe-bench/apps/politihub`, and run the following commands:
     ```
     yarn
     yarn dev
     ```
- 1. Now, you can access the site on vite dev server at `http://gameplan.test:8080`
+ 1. Now, you can access the site on vite dev server at `http://politihub.test:8080`
 
 ## Deployment
 PolitiHub is an app built on top of Frappe Framework. So, you can follow any deployment guide for hosting a Frappe Framework based site.
 
 ### Managed Hosting
-PolitiHub can be deployed in a few clicks on [Frappe Cloud](https://frappecloud.com/marketplace/apps/gameplan).
+PolitiHub can be deployed in a few clicks on [Frappe Cloud](https://frappecloud.com/marketplace/apps/politihub).
 
 ### Self hosting
 If you want to self-host, you can follow official [Frappe Bench Installation](https://github.com/frappe/bench#installation) instructions.
 
 ## Discussions
-If you have an idea that you think PolitiHub should implement or you just want to hangout with other PolitiHub users, you can join [Discussions](https://github.com/frappe/gameplan/discussions).
+If you have an idea that you think PolitiHub should implement or you just want to hangout with other PolitiHub users, you can join [Discussions](https://github.com/eden-platform/politihub/discussions).
 
 ## Reporting Bugs
-If you find any bugs, feel free to report them here on [GitHub Issues](https://github.com/frappe/gameplan/issues). Make sure you share enough information (app screenshots, browser console screenshots, stack traces, etc) for project maintainers to replicate your bug.
+If you find any bugs, feel free to report them here on [GitHub Issues](https://github.com/eden-platform/politihub/issues). Make sure you share enough information (app screenshots, browser console screenshots, stack traces, etc) for project maintainers to replicate your bug.
 
 ## License
 

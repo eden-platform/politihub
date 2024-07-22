@@ -3,12 +3,12 @@
 
 from __future__ import unicode_literals
 import frappe
-from politihub.search import GameplanSearch
+from politihub.search import PolitiHubSearch
 
 
 @frappe.whitelist()
 def search(query):
-	search = GameplanSearch()
+	search = PolitiHubSearch()
 	query = search.clean_query(query)
 
 	query_parts = query.split(" ")

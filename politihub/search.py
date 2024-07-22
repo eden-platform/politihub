@@ -17,7 +17,7 @@ UNSAFE_CHARS = re.compile(r"[\[\]{}<>+]")
 INDEX_BUILD_FLAG = "discussions_index_in_progress"
 
 
-class GameplanSearch(Search):
+class PolitiHubSearch(Search):
 	def __init__(self) -> None:
 		schema = [
 			{"name": "title", "weight": 5},
@@ -26,7 +26,7 @@ class GameplanSearch(Search):
 			{"name": "project", "type": "tag"},
 			{"name": "modified", "sortable": True},
 		]
-		super().__init__("gameplan_idx", "search_doc", schema)
+		super().__init__("politihub_idx", "search_doc", schema)
 
 	def search(self, query, **kwargs):
 		if query:
@@ -186,7 +186,7 @@ class GameplanSearch(Search):
 
 def build_index():
 	frappe.cache().set_value(INDEX_BUILD_FLAG, True)
-	search = GameplanSearch()
+	search = PolitiHubSearch()
 	search.build_index()
 	frappe.cache().set_value(INDEX_BUILD_FLAG, False)
 
@@ -197,6 +197,6 @@ def build_index_in_background():
 
 
 def build_index_if_not_exists():
-	search = GameplanSearch()
+	search = PolitiHubSearch()
 	if not search.index_exists() or not frappe.cache.exists(INDEX_BUILD_FLAG):
 		build_index()

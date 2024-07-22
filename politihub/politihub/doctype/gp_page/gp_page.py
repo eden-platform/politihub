@@ -4,7 +4,7 @@
 # import frappe
 from frappe.model.document import Document
 from politihub.utils import url_safe_slug
-from politihub.search import GameplanSearch
+from politihub.search import PolitiHubSearch
 
 
 class GPPage(Document):
@@ -16,9 +16,9 @@ class GPPage(Document):
 
 	def update_search_index(self):
 		if self.has_value_changed('title') or self.has_value_changed('content'):
-			search = GameplanSearch()
+			search = PolitiHubSearch()
 			search.index_doc(self)
 
 	def on_trash(self):
-		search = GameplanSearch()
+		search = PolitiHubSearch()
 		search.remove_doc(self)

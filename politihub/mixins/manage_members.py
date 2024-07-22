@@ -34,7 +34,7 @@ class ManageMembersMixin:
 
 	def invite_via_email(self, member):
 		invite_link = frappe.utils.get_url(
-			f"/api/method/gameplan.api.accept_invitation?key={member.key}"
+			f"/api/method/politihub.api.accept_invitation?key={member.key}"
 		)
 		title = f"Team: {self.title}" if self.doctype == "GP Team" else f"Project: {self.title}"
 		if frappe.local.dev_server:

@@ -5,7 +5,7 @@
         class="flex w-[15rem] items-center rounded-md px-2 py-2 text-left"
         :class="open ? 'bg-white shadow-sm' : 'hover:bg-gray-200'"
       >
-        <GameplanLogo class="w-8 h-8 rounded" />
+        <PolitiHubLogo class="w-8 h-8 rounded" />
         <div class="ml-2 flex flex-col">
           <div class="text-base font-medium text-gray-900 leading-none">
             PolitiHub
@@ -24,13 +24,13 @@ import { h } from 'vue'
 import { Dropdown } from 'frappe-ui'
 import { showSettingsDialog } from '@/components/Settings/SettingsDialog.vue'
 import LucideCreditCard from '~icons/lucide/credit-card'
-import GameplanLogo from './GameplanLogo.vue'
+import PolitiHubLogo from './PolitiHubLogo.vue'
 
 export default {
   name: 'UserDropdown',
   components: {
     Dropdown,
-    GameplanLogo,
+    PolitiHubLogo,
   },
   computed: {
     dropdownItems() {

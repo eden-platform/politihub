@@ -1,10 +1,10 @@
 <template>
   <div class="flex h-screen w-screen justify-center bg-gray-100">
     <div class="mt-32 w-full px-4">
-      <GameplanLogo class="mx-auto h-8 w-8" />
+      <PolitiHubLogo class="mx-auto h-8 w-8" />
       <div class="mt-6 flex items-center justify-center space-x-1.5">
         <span class="text-3xl font-semibold text-gray-900">Login to</span>
-        <GameplanLogoType class="h-6 text-gray-900" />
+        <PolitiHubLogoType class="h-6 text-gray-900" />
       </div>
       <div class="mx-auto mt-6 w-full px-4 sm:w-96">
         <form
@@ -79,15 +79,15 @@
 import { ref } from 'vue'
 import { FormControl, createResource } from 'frappe-ui'
 import { session } from '@/data/session'
-import GameplanLogo from '@/components/GameplanLogo.vue'
-import GameplanLogoType from '@/components/GameplanLogoType.vue'
+import PolitiHubLogo from '@/components/PolitiHubLogo.vue'
+import PolitiHubLogoType from '@/components/PolitiHubLogoType.vue'
 
 let showEmailLogin = ref(false)
 let email = ref('')
 let password = ref('')
 
 let authProviders = createResource({
-  url: 'gameplan.api.oauth_providers',
+  url: 'politihub.api.oauth_providers',
   auto: true,
   onSuccess(data) {
     showEmailLogin.value = data.length === 0

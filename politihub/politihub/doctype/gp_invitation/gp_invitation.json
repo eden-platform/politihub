@@ -70,7 +70,7 @@
    "fieldname": "role",
    "fieldtype": "Select",
    "label": "Role",
-   "options": "\nGameplan Admin\nGameplan Member\nGameplan Guest",
+   "options": "\nPolitiHub Admin\nPolitiHub Member\nPolitiHub Guest",
    "reqd": 1
   }
  ],

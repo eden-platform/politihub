@@ -7,7 +7,7 @@ from politihub.extends.client import check_permissions
 from politihub.politihub.doctype.gp_notification.gp_notification import GPNotification
 from politihub.mixins.activity import HasActivity
 from politihub.mixins.mentions import HasMentions
-from politihub.search import GameplanSearch
+from politihub.search import PolitiHubSearch
 
 
 class GPTask(HasMentions, HasActivity, Document):
@@ -43,12 +43,12 @@ class GPTask(HasMentions, HasActivity, Document):
 
 	def update_search_index(self):
 		if self.has_value_changed('title') or self.has_value_changed('description'):
-			search = GameplanSearch()
+			search = PolitiHubSearch()
 			search.index_doc(self)
 
 	def on_trash(self):
 		self.update_tasks_count(-1)
-		search = GameplanSearch()
+		search = PolitiHubSearch()
 		search.remove_doc(self)
 
 	def update_tasks_count(self, delta=1):

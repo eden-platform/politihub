@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
-from politihub.search import GameplanSearch
+from politihub.search import PolitiHubSearch
 from politihub.mixins.mentions import HasMentions
 from politihub.mixins.reactions import HasReactions
 from politihub.utils import remove_empty_trailing_paragraphs
@@ -54,7 +54,7 @@ class GPComment(HasMentions, HasReactions, Document):
 
 	def update_discussion_index(self):
 		if self.reference_doctype in ["GP Discussion", "GP Task"]:
-			search  = GameplanSearch()
+			search  = PolitiHubSearch()
 			if self.deleted_at:
 				search.remove_doc(self)
 			else:

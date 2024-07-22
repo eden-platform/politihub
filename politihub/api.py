@@ -324,9 +324,9 @@ def oauth_providers():
 
 @frappe.whitelist()
 def search(query, start=0):
-	from politihub.search import GameplanSearch
+	from politihub.search import PolitiHubSearch
 
-	search = GameplanSearch()
+	search = PolitiHubSearch()
 	query = search.clean_query(query)
 
 	query_parts = query.split(" ")
