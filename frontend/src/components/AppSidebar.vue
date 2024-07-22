@@ -65,9 +65,9 @@
         </button>
       </nav>
       <div class="mt-6 flex items-center justify-between px-3">
-        <h3 class="text-sm font-medium text-gray-600">Teams</h3>
+        <h3 class="text-sm font-medium text-gray-600">Organizations</h3>
         <Button
-          label="Create Team"
+          label="Create Organizations"
           variant="ghost"
           @click="showAddTeamDialog = true"
         >
@@ -130,7 +130,7 @@
               class="flex h-7 items-center px-2 text-sm text-gray-600"
               v-if="teamProjects(team.name).length === 0"
             >
-              No projects
+              No committees
             </div>
           </div>
         </div>

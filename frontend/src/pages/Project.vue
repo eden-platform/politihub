@@ -21,7 +21,7 @@
         >
           <Tooltip
             v-if="project.doc.is_private"
-            text="This project is only visible to team members"
+            text="This project is only visible to organization members"
           >
             <Badge size="lg">
               <template #prefix><LucideLock class="w-3" /></template>
@@ -84,7 +84,7 @@
                 condition: () => !project.doc.archived_at,
               },
               {
-                label: 'Move to another team',
+                label: 'Move to another organization',
                 icon: 'log-out',
                 onClick: () => (projectMoveDialog.show = true),
                 condition: () => !project.doc.archived_at,
@@ -160,7 +160,7 @@
             <Autocomplete
               :options="moveToTeamsList"
               v-model="projectMoveDialog.team"
-              placeholder="Select a team"
+              placeholder="Select an Organization"
             >
               <template #item-prefix="{ option }">
                 <span class="mr-2">{{ option.icon }}</span>
@@ -180,7 +180,7 @@
                     {
                       validate() {
                         if (!projectMoveDialog.team?.value) {
-                          return 'Team is required to move this project'
+                          return 'Organization is required to move this project'
                         }
                       },
                       onSuccess() {

@@ -1,12 +1,12 @@
 <template>
-  <Dialog :options="{ title: 'Add Team' }" v-model="showDialog">
+  <Dialog :options="{ title: 'Add Organization' }" v-model="showDialog">
     <template #body-content>
       <div class="space-y-4">
         <FormControl
-          label="Team Name"
+          label="Organization Name"
           type="text"
           v-model="newTeam.title"
-          placeholder="Team Name"
+          placeholder="Organization Name"
           @keydown.enter="createTeam($event.target.value)"
           autocomplete="off"
         />
@@ -29,7 +29,7 @@
         @click="createTeam(teamName)"
         :loading="teams.insert.loading"
       >
-        Create Team
+        Create Organization
       </Button>
     </template>
   </Dialog>

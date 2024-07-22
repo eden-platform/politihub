@@ -100,8 +100,8 @@ export default {
     },
     archiveTeam() {
       this.$dialog({
-        title: 'Archive Team',
-        message: 'Are you sure you want to archive the team?',
+        title: 'Archive Organization',
+        message: 'Are you sure you want to archive the Organization?',
         actions: [
           {
             label: 'Archive',
