@@ -40,7 +40,7 @@ app_icon_route = "/g"
 # Fixtures
 
 fixtures = [
-	{"dt": "Role", "filters": [["role_name", "like", "Gameplan %"]]},
+	{"dt": "Role", "filters": [["role_name", "like", "PolitiHub %"]]},
 ]
 
 # Home Pages

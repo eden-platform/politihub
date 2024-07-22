@@ -146,7 +146,7 @@ export default {
       })
     },
     getUserRole(user) {
-      return (user.role || '').replace('Gameplan', '')
+      return (user.role || '').replace('PolitiHub', '')
     },
     getDropdownOptions(user) {
       return [
@@ -156,11 +156,11 @@ export default {
             RoleOption({
               role: 'Admin',
               active: props.active,
-              selected: user.role === 'Gameplan Admin',
+              selected: user.role === 'PolitiHub Admin',
               onClick: () =>
                 this.changeUserRole({
                   user: user,
-                  role: 'Gameplan Admin',
+                  role: 'PolitiHub Admin',
                 }),
             }),
         },
@@ -170,11 +170,11 @@ export default {
             RoleOption({
               role: 'Member',
               active: props.active,
-              selected: user.role === 'Gameplan Member',
+              selected: user.role === 'PolitiHub Member',
               onClick: () =>
                 this.changeUserRole({
                   user: user,
-                  role: 'Gameplan Member',
+                  role: 'PolitiHub Member',
                 }),
             }),
         },
@@ -184,11 +184,11 @@ export default {
             RoleOption({
               role: 'Guest',
               active: props.active,
-              selected: user.role === 'Gameplan Guest',
+              selected: user.role === 'PolitiHub Guest',
               onClick: () =>
                 this.changeUserRole({
                   user: user,
-                  role: 'Gameplan Guest',
+                  role: 'PolitiHub Guest',
                 }),
             }),
         },

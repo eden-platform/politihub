@@ -13,7 +13,7 @@ def get_user_info(user=None):
 	if frappe.session.user == "Guest":
 		frappe.throw("Authentication failed", exc=frappe.AuthenticationError)
 
-	filters = {"roles.role": ["like", "Gameplan %"]}
+	filters = {"roles.role": ["like", "PolitiHub %"]}
 	if user:
 		filters["name"] = user
 
@@ -43,7 +43,7 @@ def get_user_info(user=None):
 			user.is_image_background_removed = user_profile.is_image_background_removed
 		user_roles = [r.role for r in roles if r.parent == user.name]
 		user.role = None
-		for role in ["Gameplan Guest", "Gameplan Member", "Gameplan Admin"]:
+		for role in ["PolitiHub Guest", "PolitiHub Member", "PolitiHub Admin"]:
 			if role in user_roles:
 				user.role = role
 	return users
@@ -55,12 +55,12 @@ def change_user_role(user: str, role: str):
 	if politihub.is_guest():
 		frappe.throw("Only Admin can change user roles")
 
-	if role not in ["Gameplan Guest", "Gameplan Member", "Gameplan Admin"]:
+	if role not in ["PolitiHub Guest", "PolitiHub Member", "PolitiHub Admin"]:
 		return get_user_info(user)[0]
 
 	user_doc = frappe.get_doc("User", user)
 	for _role in user_doc.roles:
-		if _role.role in ["Gameplan Guest", "Gameplan Member", "Gameplan Admin"]:
+		if _role.role in ["PolitiHub Guest", "PolitiHub Member", "PolitiHub Admin"]:
 			user_doc.remove(_role)
 	user_doc.append_roles(role)
 	user_doc.save(ignore_permissions=True)
@@ -89,11 +89,11 @@ def invite_by_email(emails: str, role: str, projects: list = None):
 	existing_members = frappe.db.get_all("User", filters={"email": ["in", email_list]}, pluck="email")
 	existing_invites = frappe.db.get_all(
 		"GP Invitation",
-		filters={"email": ["in", email_list], "role": ["in", ["Gameplan Admin", "Gameplan Member"]]},
+		filters={"email": ["in", email_list], "role": ["in", ["PolitiHub Admin", "PolitiHub Member"]]},
 		pluck="email",
 	)
 
-	if role == "Gameplan Guest":
+	if role == "PolitiHub Guest":
 		to_invite = list(set(email_list) - set(existing_invites))
 	else:
 		to_invite = list(set(email_list) - set(existing_members) - set(existing_invites))
@@ -280,7 +280,7 @@ def onboarding(data):
 	team = frappe.get_doc(doctype="GP Team", title=data.team).insert()
 	frappe.get_doc(doctype="GP Project", team=team.name, title=data.project).insert()
 	emails = ", ".join(data.emails)
-	invite_by_email(emails, role="Gameplan Member")
+	invite_by_email(emails, role="PolitiHub Member")
 	return team.name
 
 

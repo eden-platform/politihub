@@ -64,7 +64,7 @@ let pending = createListResource({
   doctype: 'GP Invitation',
   filters: {
     projects: ['like', `%${props.project.name}%`],
-    role: 'Gameplan Guest',
+    role: 'PolitiHub Guest',
     status: 'Pending',
   },
   fields: ['email', 'projects', 'name'],

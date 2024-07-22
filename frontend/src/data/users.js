@@ -10,7 +10,7 @@ export let users = createResource({
   initialData: [],
   transform(users) {
     for (let user of users) {
-      user.isGuest = user.role === 'Gameplan Guest'
+      user.isGuest = user.role === 'PolitiHub Guest'
       user.isNotGuest = !user.isGuest
       user.isDisabled = user.enabled === 0
       usersByName[user.name] = user

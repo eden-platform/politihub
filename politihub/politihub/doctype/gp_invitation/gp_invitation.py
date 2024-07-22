@@ -8,10 +8,10 @@ from frappe.model.document import Document
 class GPInvitation(Document):
 	def before_insert(self):
 		frappe.utils.validate_email_address(self.email, True)
-		if self.role == "Gameplan Guest" and not (self.teams or self.projects):
+		if self.role == "PolitiHub Guest" and not (self.teams or self.projects):
 			frappe.throw("Project is required to invite as Guest")
 
-		if self.role != "Gameplan Guest":
+		if self.role != "PolitiHub Guest":
 			self.teams = None
 			self.projects = None
 
@@ -27,7 +27,7 @@ class GPInvitation(Document):
 		if frappe.local.dev_server:
 			print(f"Invite link for {self.email}: {invite_link}")
 
-		title = f"Gameplan"
+		title = f"PolitiHub"
 		template = "gameplan_invitation"
 
 		frappe.sendmail(
@@ -58,7 +58,7 @@ class GPInvitation(Document):
 		self.save(ignore_permissions=True)
 
 	def create_guest_access(self, user):
-		if self.role == "Gameplan Guest":
+		if self.role == "PolitiHub Guest":
 			teams = frappe.parse_json(self.teams) if self.teams else []
 			for team in teams:
 				guest_access = frappe.get_doc(doctype="GP Guest Access")

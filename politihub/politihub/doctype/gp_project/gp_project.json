@@ -135,7 +135,7 @@
  ],
  "modified": "2024-02-06 12:12:18.808576",
  "modified_by": "Administrator",
- "module": "Gameplan",
+ "module": "PolitiHub",
  "name": "GP Project",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
@@ -160,7 +160,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gameplan Admin",
+   "role": "PolitiHub Admin",
    "share": 1,
    "write": 1
   },
@@ -172,7 +172,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gameplan Member",
+   "role": "PolitiHub Member",
    "share": 1,
    "write": 1
   },
@@ -182,7 +182,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gameplan Guest",
+   "role": "PolitiHub Guest",
    "share": 1,
    "write": 1
   }

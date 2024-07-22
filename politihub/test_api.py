@@ -14,12 +14,12 @@ def whitelist(fn):
 
 @whitelist
 def clear_data(onboard=None):
-	doctypes = frappe.get_all("DocType", filters={"module": "Gameplan"}, pluck="name")
+	doctypes = frappe.get_all("DocType", filters={"module": "PolitiHub"}, pluck="name")
 	for doctype in doctypes:
 		frappe.db.delete(doctype)
 
 	admin = frappe.get_doc('User', 'Administrator')
-	admin.add_roles('Gameplan Admin')
+	admin.add_roles('PolitiHub Admin')
 
 	if not frappe.db.exists('User', 'john@example.com'):
 		frappe.get_doc(
@@ -28,7 +28,7 @@ def clear_data(onboard=None):
 			first_name='John',
 			last_name='Doe',
 			send_welcome_email=0,
-			roles=[{'role': 'Gameplan Member'}]
+			roles=[{'role': 'PolitiHub Member'}]
 		).insert()
 
 	if not frappe.db.exists('User', 'system@example.com'):
@@ -38,7 +38,7 @@ def clear_data(onboard=None):
 			first_name='System',
 			last_name='User',
 			send_welcome_email=0,
-			roles=[{'role': 'Gameplan Admin'},{'role': 'System Manager'}]
+			roles=[{'role': 'PolitiHub Admin'},{'role': 'System Manager'}]
 		).insert()
 
 	keep_users = ['Administrator', 'Guest', 'john@example.com', 'system@example.com']

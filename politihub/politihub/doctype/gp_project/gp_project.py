@@ -147,7 +147,7 @@ class GPProject(ManageMembersMixin, Archivable, Document):
 
 	@frappe.whitelist()
 	def invite_guest(self, email):
-		invite_by_email(email, role='Gameplan Guest', projects=[self.name])
+		invite_by_email(email, role='PolitiHub Guest', projects=[self.name])
 
 	@frappe.whitelist()
 	def remove_guest(self, email):

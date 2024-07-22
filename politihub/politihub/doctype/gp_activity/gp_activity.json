@@ -48,7 +48,7 @@
  "links": [],
  "modified": "2022-12-07 21:34:41.411618",
  "modified_by": "Administrator",
- "module": "Gameplan",
+ "module": "PolitiHub",
  "name": "GP Activity",
  "owner": "Administrator",
  "permissions": [
@@ -72,7 +72,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gameplan Admin",
+   "role": "PolitiHub Admin",
    "share": 1,
    "write": 1
   },
@@ -84,7 +84,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gameplan Member",
+   "role": "PolitiHub Member",
    "share": 1,
    "write": 1
   },
@@ -95,7 +95,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Gameplan Guest",
+   "role": "PolitiHub Guest",
    "share": 1,
    "write": 1
   }

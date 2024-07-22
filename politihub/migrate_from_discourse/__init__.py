@@ -248,7 +248,7 @@ def migrate_users():
 			first_name=first_name,
 			last_name=last_name,
 			username=user.username,
-			roles=[{"role": "Gameplan Member"}]
+			roles=[{"role": "PolitiHub Member"}]
 		).insert(ignore_if_duplicate=True)
 
 		if doc:

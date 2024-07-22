@@ -20,15 +20,15 @@
             label="Role"
             type="select"
             :options="[
-              { label: 'Admin', value: 'Gameplan Admin' },
-              { label: 'Member', value: 'Gameplan Member' },
-              { label: 'Guest', value: 'Gameplan Guest' },
+              { label: 'Admin', value: 'PolitiHub Admin' },
+              { label: 'Member', value: 'PolitiHub Member' },
+              { label: 'Guest', value: 'PolitiHub Guest' },
             ]"
             v-model="role"
           />
           <p class="mt-2 text-base text-gray-900">{{ description }}</p>
         </div>
-        <div v-if="role === 'Gameplan Guest'">
+        <div v-if="role === 'PolitiHub Guest'">
           <label class="text-sm leading-4 text-gray-700">
             Invite Guest to Projects
           </label>
@@ -76,7 +76,7 @@
               {{ user.email }}
             </span>
             <span class="text-gray-600">
-              ({{ user.role.replace('Gameplan ', '') }})
+              ({{ user.role.replace('PolitiHub ', '') }})
             </span>
           </div>
           <div>
@@ -108,7 +108,7 @@ export default {
   components: { Dropdown, Tooltip, Autocomplete },
   data() {
     return {
-      role: 'Gameplan Member',
+      role: 'PolitiHub Member',
       emails: '',
       invitedUsers: [],
       projects: [],
@@ -152,11 +152,11 @@ export default {
   computed: {
     description() {
       return {
-        'Gameplan Admin':
+        'PolitiHub Admin':
           'Can create new teams and projects, invite admins and members, browse and create discussions.',
-        'Gameplan Member':
+        'PolitiHub Member':
           'Can create projects, invite members, browse and create discussions.',
-        'Gameplan Guest':
+        'PolitiHub Guest':
           'Can browse and participate in invited teams or projects.',
       }[this.role]
     },

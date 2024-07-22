@@ -34,7 +34,7 @@ bench --site politihub.localhost install-app politihub
 bench --site politihub.localhost set-config developer_mode 1
 bench --site politihub.localhost clear-cache
 bench --site politihub.localhost set-config mute_emails 1
-bench --site politihub.localhost add-user alex@example.com --first-name Alex --last-name Scott --password 123 --user-type 'System User' --add-role 'Gameplan Admin'
+bench --site politihub.localhost add-user alex@example.com --first-name Alex --last-name Scott --password 123 --user-type 'System User' --add-role 'PolitiHub Admin'
 bench use politihub.localhost
 
 bench start
