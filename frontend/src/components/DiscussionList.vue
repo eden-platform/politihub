@@ -163,7 +163,7 @@ export default {
         type: 'list',
         doctype: 'GP Discussion',
         cache: ['Discussions', this.listOptions],
-        url: 'gameplan.gameplan.doctype.gp_discussion.api.get_discussions',
+        url: 'politihub.politihub.doctype.gp_discussion.api.get_discussions',
         filters: this.listOptions.filters,
         auto: true,
         pageLength: this.listOptions.pageLength || 50,

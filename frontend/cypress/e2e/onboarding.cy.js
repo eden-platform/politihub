@@ -3,7 +3,7 @@ describe('Onboarding', () => {
     cy.login()
     cy.request({
         method: 'POST',
-        url: '/api/method/gameplan.test_api.clear_data',
+        url: '/api/method/politihub.test_api.clear_data',
     })
     cy.visit('/g')
 

@@ -6,23 +6,23 @@ app_publisher = "Don't Panic Consulting, Co."
 app_description = "Political Party Management and Collaboration tools."
 app_email = "devs@dpcco.me"
 app_license = "AGPLv3"
-app_icon_url = "/assets/gameplan/manifest/favicon-180.png"
-app_icon_title = "Gameplan"
+app_icon_url = "/assets/politihub/manifest/favicon-180.png"
+app_icon_title = "PolitiHub"
 app_icon_route = "/g"
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/gameplan/css/gameplan.css"
-# app_include_js = "/assets/gameplan/js/gameplan.js"
+# app_include_css = "/assets/politihub/css/politihub.css"
+# app_include_js = "/assets/politihub/js/politihub.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/gameplan/css/gameplan.css"
-# web_include_js = "/assets/gameplan/js/gameplan.js"
+# web_include_css = "/assets/politihub/css/politihub.css"
+# web_include_js = "/assets/politihub/js/politihub.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "gameplan/public/scss/website"
+# website_theme_scss = "politihub/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -73,29 +73,29 @@ website_redirects = [
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "gameplan.utils.jinja_methods",
-# 	"filters": "gameplan.utils.jinja_filters"
+# 	"methods": "politihub.utils.jinja_methods",
+# 	"filters": "politihub.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-before_install = "gameplan.install.before_install"
-after_install = "gameplan.install.after_install"
+before_install = "politihub.install.before_install"
+after_install = "politihub.install.after_install"
 
-after_migrate = ["gameplan.search.build_index_in_background"]
+after_migrate = ["politihub.search.build_index_in_background"]
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "gameplan.uninstall.before_uninstall"
-# after_uninstall = "gameplan.uninstall.after_uninstall"
+# before_uninstall = "politihub.uninstall.before_uninstall"
+# after_uninstall = "politihub.uninstall.after_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "gameplan.notifications.get_notification_config"
+# notification_config = "politihub.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -123,67 +123,67 @@ after_migrate = ["gameplan.search.build_index_in_background"]
 
 doc_events = {
 	"*": {
-		"on_trash": "gameplan.mixins.on_delete.on_trash",
+		"on_trash": "politihub.mixins.on_delete.on_trash",
 	},
 	"User": {
-		"after_insert": "gameplan.gameplan.doctype.gp_user_profile.gp_user_profile.create_user_profile",
+		"after_insert": "politihub.politihub.doctype.gp_user_profile.gp_user_profile.create_user_profile",
 		"on_trash": [
-			"gameplan.gameplan.doctype.gp_user_profile.gp_user_profile.delete_user_profile",
-			"gameplan.gameplan.doctype.gp_guest_access.gp_guest_access.on_user_delete",
+			"politihub.politihub.doctype.gp_user_profile.gp_user_profile.delete_user_profile",
+			"politihub.politihub.doctype.gp_guest_access.gp_guest_access.on_user_delete",
 		],
-		"on_update": "gameplan.gameplan.doctype.gp_user_profile.gp_user_profile.on_user_update"
+		"on_update": "politihub.politihub.doctype.gp_user_profile.gp_user_profile.on_user_update"
 	}
 }
 
-on_login = 'gameplan.www.g.on_login'
+on_login = 'politihub.www.g.on_login'
 
 # Scheduled Tasks
 # ---------------
 
 scheduler_events = {
 	"all": [
-		"gameplan.search.build_index_if_not_exists"
+		"politihub.search.build_index_if_not_exists"
 	],
 	"hourly": [
-		"gameplan.gameplan.doctype.gp_invitation.gp_invitation.expire_invitations"
+		"politihub.politihub.doctype.gp_invitation.gp_invitation.expire_invitations"
 	],
 }
 
 # scheduler_events = {
 # 	"all": [
-# 		"gameplan.tasks.all"
+# 		"politihub.tasks.all"
 # 	],
 # 	"daily": [
-# 		"gameplan.tasks.daily"
+# 		"politihub.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"gameplan.tasks.hourly"
+# 		"politihub.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"gameplan.tasks.weekly"
+# 		"politihub.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"gameplan.tasks.monthly"
+# 		"politihub.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "gameplan.install.before_tests"
+# before_tests = "politihub.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.client.get_list": "gameplan.extends.client.get_list"
+# 	"frappe.client.get_list": "politihub.extends.client.get_list"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "gameplan.task.get_dashboard_data"
+# 	"Task": "politihub.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -219,7 +219,7 @@ scheduler_events = {
 # --------------------------------
 
 # auth_hooks = [
-# 	"gameplan.auth.validate"
+# 	"politihub.auth.validate"
 # ]
 
 # Translation

@@ -126,7 +126,7 @@ export default {
   },
   resources: {
     inviteByEmail: {
-      url: 'gameplan.api.invite_by_email',
+      url: 'politihub.api.invite_by_email',
       makeParams() {
         return {
           emails: this.emails,

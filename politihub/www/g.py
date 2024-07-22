@@ -15,7 +15,7 @@ def get_context():
 	context.boot = get_boot()
 	context.boot.csrf_token = csrf_token
 	if frappe.session.user != 'Guest':
-		capture('active_site', 'gameplan')
+		capture('active_site', 'politihub')
 	return context
 
 @frappe.whitelist(methods=['POST'], allow_guest=True)

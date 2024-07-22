@@ -3,7 +3,7 @@ describe('Comment', () => {
     cy.login()
     cy.request({
       method: 'POST',
-      url: '/api/method/gameplan.test_api.clear_data?onboard=1',
+      url: '/api/method/politihub.test_api.clear_data?onboard=1',
     })
     cy.request('POST', '/api/method/frappe.client.insert_many', {
       docs: [
@@ -13,7 +13,7 @@ describe('Comment', () => {
         },
         {
           doctype: 'GP Project',
-          title: 'Gameplan',
+          title: 'PolitiHub',
           team: 'engineering',
         },
       ],
@@ -64,7 +64,7 @@ describe('Comment', () => {
       .then((comment) => {
         cy.intercept({
           method: 'POST',
-          url: '/api/method/gameplan.extends.client.batch',
+          url: '/api/method/politihub.extends.client.batch',
         }).as('batchRequest')
         // add a reaction
         cy.get(

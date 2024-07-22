@@ -3,8 +3,8 @@ from frappe import _
 def get_data():
 	return [
 		{
-			"module_name": "Gameplan",
+			"module_name": "PolitiHub",
 			"type": "module",
-			"label": _("Gameplan")
+			"label": _("PolitiHub")
 		}
 	]

@@ -4,15 +4,15 @@ include *.json
 include *.md
 include *.py
 include *.txt
-recursive-include gameplan *.css
-recursive-include gameplan *.csv
-recursive-include gameplan *.html
-recursive-include gameplan *.ico
-recursive-include gameplan *.js
-recursive-include gameplan *.json
-recursive-include gameplan *.md
-recursive-include gameplan *.png
-recursive-include gameplan *.py
-recursive-include gameplan *.svg
-recursive-include gameplan *.txt
-recursive-exclude gameplan *.pyc
+recursive-include politihub *.css
+recursive-include politihub *.csv
+recursive-include politihub *.html
+recursive-include politihub *.ico
+recursive-include politihub *.js
+recursive-include politihub *.json
+recursive-include politihub *.md
+recursive-include politihub *.png
+recursive-include politihub *.py
+recursive-include politihub *.svg
+recursive-include politihub *.txt
+recursive-exclude politihub *.pyc

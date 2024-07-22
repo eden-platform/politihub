@@ -154,7 +154,7 @@ export default {
       }
       return {
         type: 'list',
-        url: '/api/method/gameplan.gameplan.doctype.gp_user_profile.gp_user_profile.get_list',
+        url: '/api/method/politihub.politihub.doctype.gp_user_profile.gp_user_profile.get_list',
         cache: ['People', orderBy],
         doctype: 'GP User Profile',
         filters: { enabled: 1 },

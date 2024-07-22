@@ -83,7 +83,7 @@ export default {
   resources: {
     search: {
       cache: 'Search',
-      url: 'gameplan.api.search',
+      url: 'politihub.api.search',
       makeParams(query) {
         return { query, start: this.start }
       },

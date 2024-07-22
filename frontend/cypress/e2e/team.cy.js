@@ -3,7 +3,7 @@ describe('Team', () => {
     cy.login()
     cy.request({
         method: 'POST',
-        url: '/api/method/gameplan.test_api.clear_data?onboard=1',
+        url: '/api/method/politihub.test_api.clear_data?onboard=1',
     })
     cy.visit('/g')
     cy.get('button[aria-label="Create Team"]').click()

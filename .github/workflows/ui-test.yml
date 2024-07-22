@@ -52,7 +52,7 @@ jobs:
 
       - name: Add to Hosts
         run: |
-          echo "127.0.0.1 gameplan.test" | sudo tee -a /etc/hosts
+          echo "127.0.0.1 politihub.test" | sudo tee -a /etc/hosts
 
       - name: Cache pip
         uses: actions/cache@v3
@@ -92,13 +92,13 @@ jobs:
       - name: Site Setup
         run: |
           cd ~/frappe-bench/
-          bench --site gameplan.test execute frappe.utils.install.complete_setup_wizard
-          bench --site gameplan.test execute frappe.tests.ui_test_helpers.create_test_user
+          bench --site politihub.test execute frappe.utils.install.complete_setup_wizard
+          bench --site politihub.test execute frappe.tests.ui_test_helpers.create_test_user
 
       - name: UI Tests
-        run: cd ~/frappe-bench/apps/gameplan/frontend && yarn test
+        run: cd ~/frappe-bench/apps/politihub/frontend && yarn test
         env:
-          CYPRESS_BASE_URL: http://gameplan.test:8000
+          CYPRESS_BASE_URL: http://politihub.test:8000
           CYPRESS_RECORD_KEY: 9c23c39a-b56b-46d5-b673-44faf1f1da83
 
       - name: Stop server

@@ -37,7 +37,7 @@ let globalComponents = {
 }
 let app = createApp(App)
 setConfig('resourceFetcher', frappeRequest)
-setConfig('defaultListUrl', 'gameplan.extends.client.get_list')
+setConfig('defaultListUrl', 'politihub.extends.client.get_list')
 app.use(resourcesPlugin)
 app.use(pageMetaPlugin)
 app.use(router)
@@ -60,7 +60,7 @@ app.config.globalProperties.$isSessionUser = (email) => {
 
 let socket
 if (import.meta.env.DEV) {
-  frappeRequest({ url: '/api/method/gameplan.www.g.get_context_for_dev' }).then(
+  frappeRequest({ url: '/api/method/politihub.www.g.get_context_for_dev' }).then(
     (values) => {
       for (let key in values) {
         window[key] = values[key]

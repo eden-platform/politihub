@@ -5,7 +5,7 @@ import { session } from './session'
 
 let usersByName = reactive({})
 export let users = createResource({
-  url: 'gameplan.api.get_user_info',
+  url: 'politihub.api.get_user_info',
   cache: 'Users',
   initialData: [],
   transform(users) {

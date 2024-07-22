@@ -58,7 +58,7 @@ export default {
   resources: {
     changeUserRole() {
       return {
-        url: 'gameplan.api.change_user_role',
+        url: 'politihub.api.change_user_role',
         onSuccess(user) {
           users.setData((data) => {
             return data.map((_user) => {
@@ -73,7 +73,7 @@ export default {
     },
     removeUser() {
       return {
-        url: 'gameplan.api.remove_user',
+        url: 'politihub.api.remove_user',
         onSuccess(user) {
           users.setData((data) => data.filter((_user) => _user.name !== user))
         },

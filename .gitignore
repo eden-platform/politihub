@@ -5,8 +5,8 @@
 __pycache__
 tags
 node_modules
-gameplan/docs/current
-gameplan/public/frontend
-gameplan/www/teams.html
-gameplan/www/g.html
+politihub/docs/current
+politihub/public/frontend
+politihub/www/teams.html
+politihub/www/g.html
 build

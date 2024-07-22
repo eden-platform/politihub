@@ -76,7 +76,7 @@ export default {
   components: { Input, LoadingIndicator, ErrorMessage },
   resources: {
     onboarding: {
-      url: 'gameplan.api.onboarding',
+      url: 'politihub.api.onboarding',
       makeParams() {
         return {
           data: this.data,
