@@ -12,7 +12,7 @@
       >
         <LoadingIndicator class="h-4 w-4 text-gray-600" />
         <span class="ml-2 text-base text-gray-900">
-          Setting up your team and project
+          Setting up your organization and committee
         </span>
       </div>
       <div v-if="!$resources.onboarding.loading">
@@ -84,10 +84,10 @@ export default {
       },
       validate() {
         if (!this.data.team) {
-          return 'Please select a team'
+          return 'Please select an Organization'
         }
         if (!this.data.project) {
-          return 'Please select a project'
+          return 'Please select a Committee'
         }
       },
       onSuccess(teamId) {
@@ -111,14 +111,14 @@ export default {
     steps() {
       return [
         {
-          name: 'Team',
-          title: 'Which team are you a part of?',
+          name: 'Organization',
+          title: 'Which organization are you a part of?',
           component: OnboardingStepTeam,
           isCompleted: Boolean(this.data.team),
         },
         {
-          name: 'Project',
-          title: 'Which project are you working on?',
+          name: 'Committee',
+          title: 'Which Committee are you working on?',
           component: OnboardingStepProject,
           isCompleted: Boolean(this.data.project),
         },

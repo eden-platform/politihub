@@ -10,7 +10,7 @@
 
     <div class="mt-8">
       <div class="mb-5 flex items-center justify-between space-x-2">
-        <h2 class="text-2xl font-semibold text-gray-900">Projects</h2>
+        <h2 class="text-2xl font-semibold text-gray-900">Committees</h2>
         <div class="flex items-stretch space-x-2">
           <TabButtons
             :buttons="[{ label: 'Active' }, { label: 'Archived' }]"
@@ -99,7 +99,7 @@
             <LucidePlus class="w-5 text-gray-600" />
           </div>
           <div>
-            <h3 class="text-lg font-medium text-gray-900">Add Project</h3>
+            <h3 class="text-lg font-medium text-gray-900">Add Committee</h3>
           </div>
         </button>
       </ul>
